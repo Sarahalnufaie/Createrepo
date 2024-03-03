@@ -1,0 +1,56 @@
+ useEffect(() => {
+        fetchTodos();
+      }, []);
+      const fetchTodos = async () => {
+        try {
+          const response = await axios.get('https://65dc20793ea883a15292888b.mockapi.io/Todo');
+          console.log(response)
+          setTodos(response.data);
+        } catch (error) {
+          console.error('Error fetching todos:', error);
+        }
+      };
+
+
+     {TodoItem.id}{TodoItem.todo}{TodoItem.userId}{TodoItem.completed}
+
+
+     use ref;;; using add in todo;;;;
+     //     const inputRef: MutableRefObject<HTMLInputElement | null> = useRef<HTMLInputElement | null>(null);
+//     const handleAddTodo = () => {
+
+// const text = inputRef.current.value;
+// setTodos ([... todos,text])
+// console.log(text)
+// }
+
+    <input
+            //  ref={inputRef} 
+            placeholder="create a new todo" />
+            {/* <button
+            //  onClick={handleAddTodo}>
+              Add</button> */}
+
+                <th> <button onClick={() => updateTodo(TodoItem.id)}>updated</button></th>
+                 <th> <button onClick={() => handleEdit(TodoItem)}>updated</button></th>
+
+                 // function handleEdit(todo: TodoItem | undefined) {
+  //   setUpdatedState(todo);
+  // }
+
+  // const handleCheckboxChange = () => {
+  //   setIsChecked(!isChecked);
+  // };
+
+
+  // const [updatedState, setUpdatedState] = useState<TodoItem>();
+  // const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState<boolean>(false);
+
+   // function handleEdit(todo: TodoItem | undefined) {
+  //   setUpdatedState(todo);
+  // }
+
+  // const handleCheckboxChange = () => {
+  //   setIsChecked(!isChecked);
+  // };
